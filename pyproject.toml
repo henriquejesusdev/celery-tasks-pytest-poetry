@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "celery-tasks-pytest"
+version = "0.1.0"
+description = "Exercício: testes unitários de tasks Celery com pytest"
+authors = ["Henrique <you@example.com>"]
+readme = "README.md"
+packages = [{ include = "celery_tasks", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+celery = "^5.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
